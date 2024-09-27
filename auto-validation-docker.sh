@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set echo off
 # This script needs to be placed in the directory you want to check adn run from that directory!
 # The working directory (= script directory) will be used as 'baseDir'.
 # So configuring 'baseDir' by settings-file or cli-argument will be ignored !!"""
@@ -65,15 +65,12 @@ IMAGE_NAME=""
 # Check if the image is already locally loaded
 echo "Check if local-image exists locally..."
 #read -p "Press any key to continue... " -n1 -s
-
-imageFound=$(docker images -q "$DOCKER_LOCALIMAGE_NAME" 2> /dev/null)
-if [ -n "$imageFound" ]; then
+if docker images -q "$DOCKER_LOCALIMAGE_NAME" > /dev/null 2>&1; then
     IMAGE_NAME=$DOCKER_LOCALIMAGE_NAME
 else
     echo "Check if hub-image exists locally..."
     #read -p "Press any key to continue... " -n1 -s
-    imageFound=$(docker images -q "$DOCKER_HUBIMAGE_NAME" 2> /dev/null)
-    if [ -n "$imageFound" ]; then
+    if docker images -q "$DOCKER_HUBIMAGE_NAME" > /dev/null 2>&1; then
         IMAGE_NAME=$DOCKER_HUBIMAGE_NAME
     else
         # Load image from local archive or pull from Docker Hub
@@ -85,12 +82,7 @@ else
         else
             echo "Pull image from docker hub..."
             #read -p "Press any key to continue... " -n1 -s
-            MAC_ARM_ROSETTA_EMULATOR_FIXARG=""
-            if $(uname -p | grep -q 'arm') || $(sysctl -n machdep.cpu.brand_string | grep -q 'Apple'); then
-                MAC_ARM_ROSETTA_EMULATOR_FIXARG="--platform x86_64"
-            fi
-            # shellcheck disable=SC2086
-            docker pull $MAC_ARM_ROSETTA_EMULATOR_FIXARG $DOCKER_HUBIMAGE_NAME
+            docker pull "$DOCKER_HUBIMAGE_NAME"
             IMAGE_NAME=$DOCKER_HUBIMAGE_NAME
         fi
     fi
@@ -99,7 +91,6 @@ fi
 echo "Run new container from image..."
 #read -p "Press any key to continue... " -n1 -s
 #docker run --rm --network host --mount type=bind,src="$MOUNT_DIR",dst="/auto-val-temp/project" $IMAGE_NAME $IMAGE_ARGS
-# shellcheck disable=SC2086
 docker run --rm --mount type=bind,src="$MOUNT_DIR",dst="/auto-val-temp/project" $IMAGE_NAME $IMAGE_ARGS
 
 

@@ -58,14 +58,14 @@ set IMAGE_NAME=
 REM Check if image is already locally loaded
 echo Check if local-image exists locally...
 ::pause
-docker images -q %DOCKER_LOCALIMAGE_NAME% >NUL 2>NUL
+docker image inspect %DOCKER_LOCALIMAGE_NAME% >NUL 2>NUL
 if %errorlevel%==0 (
     set IMAGE_NAME=%DOCKER_LOCALIMAGE_NAME%
     goto runImage
 )
 echo Check if hub-image exists locally...
 ::pause
-docker images -q %DOCKER_HUBIMAGE_NAME% >NUL 2>NUL
+docker image inspect %DOCKER_HUBIMAGE_NAME% >NUL 2>NUL
 if %errorlevel%==0 (
     set IMAGE_NAME=%DOCKER_HUBIMAGE_NAME%
     goto runImage
