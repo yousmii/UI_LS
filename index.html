@@ -8,43 +8,86 @@
 <body>
 
 <header>
-    <img src="media/logo.svg" width="20" alt="Logo van Yousra's Sticker Shop">
     <h1>Yousra's Sticker Shop</h1>
-
     <nav>
         <h2>Navigatie</h2>
         <menu>
-            <li>Home</li>
+            <li>Home
+                <ul>
+                    <li><a href="#aboutShop">Over de shop</a></li>
+                    <li><a href="#aboutMe">Over mij</a></li>
+                    <li><a href="#reviews">Enkele getuigenissen</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </li>
             <li><a href="html/products.html">Producten</a></li>
             <li><a href="html/bestel.html">Bestel</a></li>
         </menu>
     </nav>
+    <section>
+        <h2>Breadcrumb:</h2>
+        <ul>
+            <li>Home</li>
+        </ul>
+    </section>
 </header>
 
 <main>
     <section>
-    <!-- TODO: Add an image that represents the shop -->
-    <h2>Over de shop</h2>
-    <p>Welkom bij Yousra's Sticker shop!🌟 Hier vind je een magische wereld vol kleurrijke, unieke en creatieve
-        stickers die je leven opvrolijken. Of je nu je laptop, telefoon, notitieboekje of zelfs je muur wilt
-        versieren, wij hebben de perfecte sticker voor jou. Duik in onze collectie en laat je inspireren door de
-        eindeloze mogelijkheden om je persoonlijke stijl te laten zien. Veel plakplezier! 🎨✨</p>
+        <h2 id="aboutShop">Over de shop</h2>
+        <img src="media/sticker-sheet.jpg" alt="Sticker Sheet" id="coverImage">
+        <p>Welkom bij Yousra's Sticker shop!🌟 Hier vind je een magische wereld vol kleurrijke, unieke en creatieve
+            stickers die je leven opvrolijken. Of je nu je laptop, telefoon, notitieboekje of zelfs je muur wilt
+            versieren, wij hebben de perfecte sticker voor jou. Duik in onze collectie en laat je inspireren door de
+            eindeloze mogelijkheden om je persoonlijke stijl te laten zien. Veel plakplezier! 🎨✨</p>
     </section>
 </main>
 
+<aside>
+    <h2 id="aboutMe">Over mij</h2>
+    <p>
+        Ik ben Yousra, een studente die houdt van kleur en design. Ik ben gepassioneerd door het maken van
+        stickers en wil graag mijn creaties met jullie delen. Ik hoop dat jullie net zo enthousiast zijn over mijn
+        stickers als ik! (❁´◡`❁)
+    </p>
+</aside>
+
+<aside>
+    <h2 id="reviews">Enkele getuigenissen:</h2>
+    <blockquote>
+        "De stickers van Yousra zijn zo mooi en van hoge kwaliteit! Ik ben er helemaal weg van!"
+    </blockquote>
+    <footer>- Sarah</footer>
+    <blockquote>
+        "Ik heb al meerdere stickers besteld en ik ben nog nooit teleurgesteld geweest. Ze zijn zo leuk en
+        origineel!"
+    </blockquote>
+    <footer>- Emma</footer>
+    <blockquote>
+        "Ik ben een grote fan van Yousra's Sticker Shop! De stickers zijn zo mooi en ze maken me altijd blij!"
+    </blockquote>
+    <footer>- Lisa</footer>
+</aside>
+
 <footer>
     <section>
-        <h2>Contact</h2>
-        <p>
-            Yousra Smits <br>
-            <a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a><br>
-            <a href="tel:+32486858352">+32 486 85 83 52</a><br>
-            <a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a>
-        </p>
+        <h2 id="contact">Contact</h2>
+        <ul>
+            <li> Yousra Smits</li>
+            <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
+            <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
+            <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
+        </ul>
+        <section>
+            <h3>Social media:</h3>
+            <ul>
+                <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">Instagram</a></li>
+                <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">Facebook</a></li>
+                <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">Pinterest</a></li>
+            </ul>
+        </section>
     </section>
-    <section>
-        <h2>Volg mij op social media:</h2>
-    </section>
+    <p>&copy;Yousra Smits</p>
 </footer>
 </body>
 </html>
