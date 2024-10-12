@@ -2,13 +2,13 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Producten</title>
+    <title>Product</title>
 </head>
 
 <body>
 
 <header>
-    <h1>Producten</h1>
+    <h1>{Productnaam}</h1>
     <nav>
         <h2>Navigatie</h2>
         <menu>
@@ -20,7 +20,17 @@
 </header>
 
 <main>
-   <h2>Producten</h2>
+    <section>
+        <h2>{Productnaam}</h2>
+        <img src="../media/sticker1.jpg" alt="{Productnaam}" id="productImage">
+        <p>{Productbeschrijving}</p>
+        <p>Prijs: {Productprijs}</p>
+        <p>Productcode: {Productcode}</p>
+    </section>
+    <section>
+        <h2>Bestel hier</h2>
+        <p><a href="bestel.html">Bestelpagina</a></p>
+    </section>
 </main>
 
 <footer>
