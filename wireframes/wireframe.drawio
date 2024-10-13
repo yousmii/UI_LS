@@ -101,7 +101,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Products" id="4C0bMVOIn3pckUdYbpST">
-    <mxGraphModel dx="2758" dy="1722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
+    <mxGraphModel dx="1970" dy="1230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1200" math="0" shadow="0">
       <root>
         <mxCell id="ewdrcuyFl1P46YgjhRkT-0" />
         <mxCell id="ewdrcuyFl1P46YgjhRkT-1" parent="ewdrcuyFl1P46YgjhRkT-0" />
@@ -202,10 +202,10 @@
           <mxGeometry x="45" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="f4hXNSrQqUTyJlsvq2Ot-46" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;aspect=fixed;" vertex="1" parent="f4hXNSrQqUTyJlsvq2Ot-32">
-          <mxGeometry x="465" width="160" height="160" as="geometry" />
+          <mxGeometry x="458" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="D7P5yiD7ZBRb3MM7FMAA-0" value="" style="verticalLabelPosition=bottom;shadow=0;dashed=0;align=center;html=1;verticalAlign=top;strokeWidth=1;shape=mxgraph.mockup.graphics.simpleIcon;strokeColor=#999999;fillColor=#ffffff;aspect=fixed;" vertex="1" parent="f4hXNSrQqUTyJlsvq2Ot-32">
-          <mxGeometry x="248" width="160" height="160" as="geometry" />
+          <mxGeometry x="249" width="160" height="160" as="geometry" />
         </mxCell>
         <mxCell id="f4hXNSrQqUTyJlsvq2Ot-47" value="" style="group" vertex="1" connectable="0" parent="ewdrcuyFl1P46YgjhRkT-2">
           <mxGeometry x="627" y="240" width="652" height="40" as="geometry" />
