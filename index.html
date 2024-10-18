@@ -4,34 +4,39 @@
     <meta charset="UTF-8">
     <title>Yousra's Sticker Shop</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico"/>
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css"/>
 
-<header>
-    <h1>Yousra's Sticker Shop</h1>
+    <link rel="stylesheet" href="css/home-style.css"/>
+
+</head>
+
+<body class="homeGrid">
+<header class="gheader">
+    <h1 class="hiddenTitle">Homepage</h1>
+
+    <section class="title">
+        <img src="media/logo.svg" alt="Logo" class="logo">
+        <h2>Yousra's Sticker Shop</h2>
+        <img src="media/logo.svg" alt="Logo" class="logo">
+    </section>
+
     <nav>
-        <h2>Navigatie</h2>
+        <h2 class="hiddenTitle">Navigatie</h2>
         <menu>
-            <li><a href="index.html"> Home </a></li>
+            <li><a class="active" href="#"> Home </a></li>
             <li><a href="html/products.html">Producten</a></li>
             <li><a href="html/bestel.html">Bestel</a></li>
         </menu>
     </nav>
 </header>
 
-<main>
-    <section>
-        <h2 id="aboutShop">Over de shop</h2>
-        <img src="media/sticker-sheet.jpg" alt="Sticker Sheet" id="coverImage">
-        <p>Welkom bij Yousra's Sticker shop!🌟 Hier vind je een magische wereld vol met hoge kwaliteit, waterbestendige
-            en leuke vinyl stickers die je leven opvrolijken. Of je nu je laptop, telefoon, notitieboekje of zelfs je muur wilt
-            versieren, wij hebben de perfecte sticker voor jou. Duik in onze collectie en laat je inspireren door de
-            eindeloze mogelijkheden om je persoonlijke stijl te laten zien. Veel plakplezier! 🎨✨</p>
-    </section>
-</main>
+<img src="media/sticker-sheet.jpg" alt="Sticker Sheet" class="gcoverImage">
 
-<aside>
-    <h2 id="aboutMe">Over mij</h2>
+<aside class="gaboutMe">
+    <h2>Over mij</h2>
     <p>
         Ik ben Yousra, een studente die houdt van kleur en design. Ik ben gepassioneerd door het maken van
         stickers en wil graag mijn creaties met jullie delen. Ik hoop dat jullie net zo enthousiast zijn over mijn
@@ -39,8 +44,19 @@
     </p>
 </aside>
 
-<aside>
-    <h2 id="reviews">Enkele getuigenissen:</h2>
+<main class="gmain">
+    <section>
+        <h2>Over de shop</h2>
+        <p>Welkom bij Yousra's Sticker shop!🌟 Hier vind je een magische wereld vol met hoge kwaliteit, waterbestendige
+            en leuke vinyl stickers die je leven opvrolijken. Of je nu je laptop, telefoon, notitieboekje of zelfs je
+            muur wilt
+            versieren, wij hebben de perfecte sticker voor jou. Duik in onze collectie en laat je inspireren door de
+            eindeloze mogelijkheden om je persoonlijke stijl te laten zien. Veel plakplezier! 🎨✨</p>
+    </section>
+</main>
+
+<aside class="greviews">
+    <h2>Enkele getuigenissen:</h2>
     <blockquote>
         "De stickers van Yousra zijn zo mooi en van hoge kwaliteit! Ik ben er helemaal weg van!"
     </blockquote>
@@ -56,25 +72,30 @@
     <footer>- Lisa</footer>
 </aside>
 
-<footer>
+<footer class="contact gfooter">
+    <h2 class="hiddenTitle">Footer</h2>
+
     <section>
-        <h2 id="contact">Contact</h2>
+        <h2>Contact</h2>
         <ul>
             <li> Yousra Smits</li>
             <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
             <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
             <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
         </ul>
-        <section>
-            <h3>Social media:</h3>
-            <ul>
-                <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">Facebook</a></li>
-                <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">Pinterest</a></li>
-            </ul>
-        </section>
     </section>
+
+
     <p>&copy;Yousra Smits</p>
+
+    <section>
+        <h3>Social media:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">Facebook</a></li>
+            <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">Pinterest</a></li>
+        </ul>
+    </section>
 </footer>
 </body>
 </html>
