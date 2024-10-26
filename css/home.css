@@ -1,0 +1,68 @@
+/*Grid for the homepage*/
+.homeGrid {
+    display: grid;
+    grid-template-areas:
+        "aboutMe main reviews";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1em;
+}
+
+.aboutMe {
+    grid-area: aboutMe;
+}
+
+.main {
+    grid-area: main;
+}
+
+.reviews {
+    grid-area: reviews;
+}
+
+/*Page specific styling*/
+.pageContent h2 { /* pageContent is a class that is used on the main content of the page, this excl. the header and footer */
+    text-align: center;
+
+    background-color: var(--blue);
+
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+.main h2 {
+    background-color: var(--orange);
+}
+
+.card {
+    position: relative;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    position: relative;
+    border-radius: 1rem;
+    margin-top: auto;
+}
+
+.card p{
+    padding: 10px 1.2em;
+}
+
+#welcome{
+    margin: 2rem 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: var(--purple-text);
+}
+
+
+.card cite{
+    font-weight: bolder;
+    color: var(--purple-text);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em 1.5em;
+}
