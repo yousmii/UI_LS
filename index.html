@@ -4,98 +4,134 @@
     <meta charset="UTF-8">
     <title>Yousra's Sticker Shop</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico"/>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css"/>
 
-    <link rel="stylesheet" href="css/home-style.css"/>
+    <link rel="stylesheet" href="css/site.css"/>
+    <link rel="stylesheet" href="css/home.css"/>
 
 </head>
 
-<body class="homeGrid">
-<header class="gheader">
-    <h1 class="hiddenTitle">Homepage</h1>
+<body>
+<h1 class="hiddenTitle">Homepage</h1>
 
-    <section class="title">
-        <img src="media/logo.svg" alt="Logo" class="logo">
-        <h2>Yousra's Sticker Shop</h2>
-        <img src="media/logo.svg" alt="Logo" class="logo">
-    </section>
+<header class="header">
+    <img src="media/logo.svg" alt="Logo" id="logo">
+    <span class="title">
+        Meowgical Stickers
+    </span>
 
     <nav>
         <h2 class="hiddenTitle">Navigatie</h2>
-        <menu>
-            <li><a class="active" href="#"> Home </a></li>
-            <li><a href="html/products.html">Producten</a></li>
+        <menu class="nav-menu">
+            <li><a class="active" href="index.html"> Info </a></li>
+            <li class="has-children">
+                <a href="html/products.html">Producten</a>
+                <ul>
+                    <li><a href="html/products.html">All Stickers</a></li>
+                    <li><a href="html/products.html?category=single_stickers">Single Stickers</a></li>
+                    <li><a href="html/products.html?category=sticker_sheets">Sticker Sheets</a></li>
+                </ul>
+            </li>
             <li><a href="html/bestel.html">Bestel</a></li>
         </menu>
     </nav>
 </header>
 
-<img src="media/sticker-sheet.jpg" alt="Sticker Sheet" class="gcoverImage">
+<div class="homeGrid pageContent">
 
-<aside class="gaboutMe">
-    <h2>Over mij</h2>
-    <p>
-        Ik ben Yousra, een studente die houdt van kleur en design. Ik ben gepassioneerd door het maken van
-        stickers en wil graag mijn creaties met jullie delen. Ik hoop dat jullie net zo enthousiast zijn over mijn
-        stickers als ik! (❁´◡`❁)
-    </p>
-</aside>
+    <main class="main">
+        <section>
+            <h2 class="sticker-container">Over de shop</h2>
+            <div class="card">
+                <span id="welcome"> Welkom bij Meowgical Stickers! 🌈</span>
+                <p>
+                    Hier vind je een magische wereld vol met hoge kwaliteit,
+                    waterbestendige en leuke vinyl stickers die je leven opvrolijken. Of je nu je laptop, telefoon,
+                    notitieboekje of zelfs
+                    je muur wilt versieren, wij hebben de perfecte sticker voor jou. Duik in mijn collectie en laat je
+                    inspireren door de
+                    eindeloze mogelijkheden om je persoonlijke stijl te laten zien. Veel plakplezier! 🎨✨
+                </p>
+                <img src="media/cover-image.jpg" alt="Ikea Sticker Sheet">
+            </div>
+        </section>
+    </main>
 
-<main class="gmain">
-    <section>
-        <h2>Over de shop</h2>
-        <p>Welkom bij Yousra's Sticker shop!🌟 Hier vind je een magische wereld vol met hoge kwaliteit, waterbestendige
-            en leuke vinyl stickers die je leven opvrolijken. Of je nu je laptop, telefoon, notitieboekje of zelfs je
-            muur wilt
-            versieren, wij hebben de perfecte sticker voor jou. Duik in onze collectie en laat je inspireren door de
-            eindeloze mogelijkheden om je persoonlijke stijl te laten zien. Veel plakplezier! 🎨✨</p>
+    <aside class="aboutMe">
+        <h2 class="sticker-container">Over mij</h2>
+        <div class="card">
+            <p>
+                Ik ben Yousra, een studente die houdt van kleur en design. Ik ben gepassioneerd door het maken van
+                stickers en wil graag mijn creaties met jullie delen. Ik hoop dat jullie net zo enthousiast zijn over
+                mijn
+                stickers als ik! ✨
+            </p>
+            <img src="media/Yousra.jpg" alt="Foto van Yousra">
+        </div>
+    </aside>
+
+    <aside class="reviews">
+        <h2 class="sticker-container">Getuigenissen</h2>
+        <div class="card">
+            <blockquote>
+                "De stickers van Meowgical zijn zo mooi en van hoge kwaliteit! Ik ben er helemaal weg van!"
+            </blockquote>
+            <cite>Sarah</cite>
+        </div>
+
+        <div class="card">
+            <blockquote>
+                "Ik heb al meerdere stickers besteld en ik ben nog nooit teleurgesteld geweest. Ze zijn zo leuk en
+                origineel!"
+            </blockquote>
+            <cite> Emma</cite>
+        </div>
+        <div class="card">
+            <blockquote>
+                "Ik ben een grote fan van Yousra's Sticker Shop! De stickers zijn zo mooi en ze maken me altijd blij!"
+            </blockquote>
+            <cite>Lisa</cite>
+        </div>
+    </aside>
+
+</div>
+
+<footer class="footer">
+    <section id="contact">
+        <h2 class="hiddenTitle">Contact</h2>
+        <address>
+            <ul>
+                <li> Yousra Smits</li>
+                <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
+                <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
+                <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
+            </ul>
+        </address>
     </section>
-</main>
 
-<aside class="greviews">
-    <h2>Enkele getuigenissen:</h2>
-    <blockquote>
-        "De stickers van Yousra zijn zo mooi en van hoge kwaliteit! Ik ben er helemaal weg van!"
-    </blockquote>
-    <footer>- Sarah</footer>
-    <blockquote>
-        "Ik heb al meerdere stickers besteld en ik ben nog nooit teleurgesteld geweest. Ze zijn zo leuk en
-        origineel!"
-    </blockquote>
-    <footer>- Emma</footer>
-    <blockquote>
-        "Ik ben een grote fan van Yousra's Sticker Shop! De stickers zijn zo mooi en ze maken me altijd blij!"
-    </blockquote>
-    <footer>- Lisa</footer>
-</aside>
-
-<footer class="contact gfooter">
-    <h2 class="hiddenTitle">Footer</h2>
-
-    <section>
-        <h2>Contact</h2>
-        <ul>
-            <li> Yousra Smits</li>
-            <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
-            <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
-            <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
-        </ul>
+    <section id="legal">
+        <h2 class="hiddenTitle">Legal</h2>
+        <p>&copy;Yousra Smits</p>
     </section>
 
-
-    <p>&copy;Yousra Smits</p>
-
-    <section>
-        <h3>Social media:</h3>
+    <section id="socials">
+        <h2 class="hiddenTitle">Social media</h2>
         <ul>
-            <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">Instagram</a></li>
-            <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">Facebook</a></li>
-            <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">Pinterest</a></li>
+            <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">
+                <img src="media/social%20media%20icons/instagram.png" alt="Instagram"/>
+            </a></li>
+            <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">
+                    <img src="media/social%20media%20icons/facebook.png" alt="Facebook"/>
+            </a></li>
+            <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">
+                    <img src="media/social%20media%20icons/pinterest.png" alt="Pinterest"/>
+            </a></li>
         </ul>
     </section>
 </footer>
+
 </body>
 </html>

@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <title>Product</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/site.css"/>
 </head>
 
 <body>
 
 <header>
-    <h1>{Productnaam}</h1>
+    <h1 class="hiddenTitle">{Productnaam}</h1>
+
+    <section class="title">
+        <img src="../media/logo.svg" alt="Logo" class="logo">
+        <h2>Yousra's Sticker Shop</h2>
+        <img src="../media/logo.svg" alt="Logo" class="logo">
+    </section>
+
     <nav>
         <h2>Navigatie</h2>
         <menu>
@@ -20,18 +32,18 @@
     </nav>
     <nav>
         <h2>Breadcrumb Menu</h2>
-        <menu>
+        <ol>
             <li><a href="../index.html">Home</a>/</li>
             <li><a href="./products.html">Producten</a>/</li>
             <li>{Productnaam}</li>
-        </menu>
+        </ol>
     </nav>
 </header>
 
 <main>
     <section>
         <h2>{Productnaam}</h2>
-        <img src="../media/sticker1.jpg" alt="{Productnaam}" id="productImage">
+        <img src="../media/single_stickers/sticker1.jpg" alt="{Productnaam}" id="productImage">
 
         <section>
             <h3>Productinformatie:</h3>
