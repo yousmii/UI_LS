@@ -12,29 +12,25 @@
 </head>
 <body>
 
-<header>
-    <h1 class="hiddenTitle">Bestelling gemaakt!</h1>
-
-    <section class="title">
-        <img src="../media/logo.svg" alt="Logo" class="logo">
-        <h2>Yousra's Sticker Shop</h2>
-        <img src="../media/logo.svg" alt="Logo" class="logo">
-    </section>
+<header class="header">
+    <img src="../media/logo.svg" alt="Logo" id="logo">
+    <span class="title">
+        Meowgical Stickers
+    </span>
 
     <nav>
-        <h2>Navigatie</h2>
-        <menu>
-            <li><a href="../index.html"> Home </a></li>
-            <li><a href="./products.html">Producten</a></li>
-            <li><a href="./bestel.html">Bestel</a></li>
-        </menu>
-    </nav>
-    <nav>
-        <h2>Breadcrumb Menu</h2>
-        <menu>
-            <li><a href="../index.html">Home</a>/</li>
-            <li><a href="./bestel.html">Bestellen</a>/</li>
-            <li>Confirmatie</li>
+        <h2 class="hiddenTitle">Navigatie</h2>
+        <menu class="nav-menu">
+            <li><a class="active" href="../index.html"> Info </a></li>
+            <li class="has-children">
+                <a href="products.html">Producten</a>
+                <ul>
+                    <li><a href="products.html">All Stickers</a></li>
+                    <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
+                    <li><a href="products.html?category=sticker_sheets">Sticker Sheets</a></li>
+                </ul>
+            </li>
+            <li><a href="bestel.html">Bestel</a></li>
         </menu>
     </nav>
 </header>
@@ -46,25 +42,38 @@
     </section>
 </main>
 
-<footer>
-    <section>
-        <h2 id="contact">Contact</h2>
-        <ul>
-            <li> Yousra Smits</li>
-            <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
-            <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
-            <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
-        </ul>
-        <section>
-            <h3>Social media:</h3>
+<footer class="footer">
+    <section id="contact">
+        <h2 class="hiddenTitle">Contact</h2>
+        <address>
             <ul>
-                <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">Facebook</a></li>
-                <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">Pinterest</a></li>
+                <li> Yousra Smits</li>
+                <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
+                <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
+                <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
             </ul>
-        </section>
+        </address>
     </section>
-    <p>&copy;Yousra Smits</p>
+
+    <section id="legal">
+        <h2 class="hiddenTitle">Legal</h2>
+        <p>&copy;Yousra Smits</p>
+    </section>
+
+    <section id="socials">
+        <h2 class="hiddenTitle">Social media</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">
+                <img src="../media/social%20media%20icons/instagram.png" alt="Instagram"/>
+            </a></li>
+            <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">
+                <img src="../media/social%20media%20icons/facebook.png" alt="Facebook"/>
+            </a></li>
+            <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">
+                <img src="../media/social%20media%20icons/pinterest.png" alt="Pinterest"/>
+            </a></li>
+        </ul>
+    </section>
 </footer>
 
 </body>
