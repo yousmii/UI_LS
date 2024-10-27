@@ -13,22 +13,25 @@
 
 <body>
 
-<header>
-    <h1 class="hiddenTitle">Producten</h1>
-
-    <section class="title">
-        <img src="../media/logo.svg" alt="Logo" class="logo">
-        <h2>Yousra's Sticker Shop</h2>
-        <img src="../media/logo.svg" alt="Logo" class="logo">
-    </section>
-
+<header class="header">
+    <img src="../media/logo.svg" alt="Logo" id="logo">
+    <span class="title">
+        Meowgical Stickers
+    </span>
 
     <nav>
-        <h2>Navigatie</h2>
-        <menu>
-            <li><a href="../index.html"> Home </a></li>
-            <li><a href="./products.html">Producten</a></li>
-            <li><a href="./bestel.html">Bestel</a></li>
+        <h2 class="hiddenTitle">Navigatie</h2>
+        <menu class="nav-menu">
+            <li><a class="active" href="../index.html"> Info </a></li>
+            <li class="has-children">
+                <a href="products.html">Producten</a>
+                <ul>
+                    <li><a href="products.html">All Stickers</a></li>
+                    <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
+                    <li><a href="products.html?category=sticker_sheets">Sticker Sheets</a></li>
+                </ul>
+            </li>
+            <li><a href="bestel.html">Bestel</a></li>
         </menu>
     </nav>
 </header>
@@ -46,94 +49,107 @@
         <h2>Alle producten</h2>
         <ul>
             <li>
-                <a href="product1.html">
-                Sticker 1
-                <img src="../media/single_stickers/sticker1.jpg" alt="Sticker 1">
+                <a href="space-bunny.html">
+                Space Bunny Sticker
+                <img src="../media/single_stickers/space_bunny.jpg" alt="Space Bunny Sticker">
                 </a>
             </li>
             <li>
-                <a href="product2.html">
-                Sticker 2
-                <img src="../media/single_stickers/sticker2.jpg" alt="Sticker 2">
+                <a href="rest-is-prodcutive.html">
+                Rest is Productive Sticker
+                <img src="../media/single_stickers/rest_is_productive.jpg" alt="Rest is Productive Sticker">
                 </a>
             </li>
             <li>
-                <a href="product3.html">
-                Sticker 3
-                <img src="../media/single_stickers/sticker3.jpg" alt="Sticker 3">
+                <a href="chonky-cat.html">
+                Chonky Cat Sticker
+                <img src="../media/single_stickers/chonky.jpg" alt="Chonky Cat Sticker">
                 </a>
             </li>
             <li>
-                Sticker 4
-                <img src="../media/single_stickers/sticker4.jpg" alt="Sticker 4">
+                Anxious but Okay Sticker
+                <img src="../media/single_stickers/anxious_but_okay.jpg" alt="Anxious But Okay Sticker">
             </li>
             <li>
-                Sticker 5
-                <img src="../media/single_stickers/sticker5.jpg" alt="Sticker 5">
+                Cuddling Birds Sticker
+                <img src="../media/single_stickers/cuddling_birds.jpg" alt="Cuddling Birds Sticker">
             </li>
             <li>
-                Sticker 6
-                <img src="../media/single_stickers/sticker6.jpg" alt="Sticker 6">
+                Confused Wolfie Sticker
+                <img src="../media/single_stickers/confused_wolfie.jpg" alt="Confused Wolfie Sticker">
             </li>
             <li>
-                Sticker 7
-                <img src="../media/single_stickers/sticker7.jpg" alt="Sticker 7">
+                Drink Water Sticker
+                <img src="../media/single_stickers/drink_water.jpg" alt="Drink Water Sticker">
             </li>
             <li>
-                Sticker 8
-                <img src="../media/single_stickers/sticker8.jpg" alt="Sticker 8">
+                Look, It's Us Sticker
+                <img src="../media/single_stickers/look_its_us.jpg" alt="Look, It's Us! Sticker">
             </li>
             <li>
-                Sticker 9
-                <img src="../media/single_stickers/sticker9.jpg" alt="Sticker 9">
+                Mummy Cat Sticker
+                <img src="../media/single_stickers/mummy_cat.jpg" alt="Mummy Cat Sticker">
             </li>
             <li>
-                Sticker 10
-                <img src="../media/single_stickers/sticker10.jpg" alt="Sticker 10">
+                No Talk, Angy Sticker
+                <img src="../media/single_stickers/no-talk_angy.jpg" alt="No Talk, Me Angy Sticker">
             </li>
             <li>
-                Sticker 11
-                <img src="../media/single_stickers/sticker11.jpg" alt="Sticker 11">
+                Pigeon Appreciation Club Sticker
+                <img src="../media/single_stickers/pigeon_appreciation_club.jpg" alt="Pigeon Appreciation Club Sticker">
             </li>
             <li>
-                Sticker 12
-                <img src="../media/single_stickers/sticker12.jpg" alt="Sticker 12">
+                Regret Scrolling Sticker
+                <img src="../media/single_stickers/regret_scrolling.jpg" alt="Regret Scrolling Sticker">
             </li>
             <li>
-                Sticker 13
-                <img src="../media/single_stickers/sticker13.jpg" alt="Sticker 13">
+                Smol Cat Sticker
+                <img src="../media/single_stickers/smol.jpg" alt="Smol Cat Sticker">
             </li>
             <li>
-                Sticker 14
-                <img src="../media/single_stickers/sticker14.jpg" alt="Sticker 14">
+                Love My Plushies Sticker
+                <img src="../media/single_stickers/love_my_plushies.jpg" alt="Love My Plushies Sticker">
             </li>
             <li>
-                Sticker 15
-                <img src="../media/single_stickers/sticker15.jpg" alt="Sticker 15">
+                Worm Love Sticker
+                <img src="../media/single_stickers/worm_love.jpg" alt="Worm Love Sticker">
             </li>
         </ul>
     </section>
 </main>
 
-<footer>
-    <section>
-        <h2 id="contact">Contact</h2>
-        <ul>
-            <li> Yousra Smits</li>
-            <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
-            <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
-            <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
-        </ul>
-        <section>
-            <h3>Social media:</h3>
+<footer class="footer">
+    <section id="contact">
+        <h2 class="hiddenTitle">Contact</h2>
+        <address>
             <ul>
-                <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">Facebook</a></li>
-                <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">Pinterest</a></li>
+                <li> Yousra Smits</li>
+                <li><a href="mailto:yousra.smits@student.kdg.be">yousra.smits@student.kdg.be</a></li>
+                <li><a href="tel:+32455755775">+32 455 75 57 75</a></li>
+                <li><a href="https://maps.app.goo.gl/VFXvDjbPXqkcJnX68" target="_blank">KDG Campus Pothoek</a></li>
             </ul>
-        </section>
+        </address>
     </section>
-    <p>&copy;Yousra Smits</p>
+
+    <section id="legal">
+        <h2 class="hiddenTitle">Legal</h2>
+        <p>&copy;Yousra Smits</p>
+    </section>
+
+    <section id="socials">
+        <h2 class="hiddenTitle">Social media</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/yousras_sticker_shop/" target="_blank">
+                <img src="../media/social%20media%20icons/instagram.png" alt="Instagram"/>
+            </a></li>
+            <li><a href="https://www.facebook.com/yousrasstickershop" target="_blank">
+                <img src="../media/social%20media%20icons/facebook.png" alt="Facebook"/>
+            </a></li>
+            <li><a href="https://www.pinterest.com/yousrasstickershop" target="_blank">
+                <img src="../media/social%20media%20icons/pinterest.png" alt="Pinterest"/>
+            </a></li>
+        </ul>
+    </section>
 </footer>
 </body>
 </html>

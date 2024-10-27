@@ -122,11 +122,13 @@ header a{
     list-style-type: none;
     position: absolute;
 
+    margin-top: 0;
     padding: 0;
 }
 
 .has-children:hover ul {
     flex-direction: column;
+
 }
 
 .has-children:hover ul li {
