@@ -14,6 +14,10 @@
     flex-direction: column;
 }
 
+#filter:hover ul, .label{
+    position: absolute;
+}
+
 /*region ProductList*/
 .productList{
     flex-wrap: wrap;
@@ -23,7 +27,6 @@
 }
 
 .productList > li{
-
     background-color: var(--white);
     border-radius: 1.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -52,11 +55,23 @@
     font-size: 1.1rem;
     margin: 0.2rem 0;
 }
+
+.label {
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+}
+
+
+.productList .sold-out img{
+    filter: grayscale(100%);
+}
+
 /*endregion ProductList*/
 
 /*#region Filters*/
 .filters{
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 2rem;
 }
 
@@ -76,7 +91,6 @@
 
 #filter:hover ul {
     align-items: stretch;
-    position: absolute;
     z-index: 1;
 }
 

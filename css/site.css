@@ -15,8 +15,8 @@
     /*Main colors*/
     --white: #FAF4EE;
     --sand: #ffebde;
-    --red: #cb8499;
-    --green: #A3CA9B;
+    --red: #af6270;
+    --green: #87b07e;
     --blue: #B9D9F0;
     --darker-blue: #84b4d2;
     --purple: #B9ABEA;
@@ -224,4 +224,23 @@ footer ul{
 
 .pageContent, .card{
     position: relative;
+}
+
+.label{
+    color: var(--white);
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: bold;
+}
+.label.new{
+    background-color: var(--green);
+}
+
+.label.sold-out{
+    background-color: var(--red);
+
+}
+.label.sale{
+    background-color: var(--purple-text);
 }
