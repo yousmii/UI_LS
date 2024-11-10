@@ -9,6 +9,7 @@
 
 .aboutMe {
     grid-area: aboutMe;
+    justify-content: flex-end;
 }
 
 .main {
@@ -17,29 +18,29 @@
 
 .reviews {
     grid-area: reviews;
+    justify-content: center;
+}
+
+.homeGrid aside {
+    display: flex;
+    flex-direction: column;
 }
 
 /*Page specific styling*/
-.pageContent h2 { /* pageContent is a class that is used on the main content of the page, this excl. the header and footer */
+#pageContent h2 { /* pageContent is a class that is used on the main content of the page, this excl. the header and footer */
     text-align: center;
-
-    background-color: var(--blue);
 
     margin: 1rem auto;
     padding: 1rem;
 }
 
-.main h2 {
+#pageContent .main h2 {
+    width: 80%;
     background-color: var(--orange);
 }
 
-.card {
-    position: relative;
-    text-align: center;
-}
-
 .card img {
-    width: 100%;
+    width: 80%;
     position: relative;
     border-radius: 1rem;
     margin-top: auto;

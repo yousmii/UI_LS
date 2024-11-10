@@ -35,8 +35,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background-color: var(--background);
-
-    margin: 0;
+    margin: 0; /*Remove default margin for header and footer*/
 }
 
 li{
@@ -107,7 +106,7 @@ header a{
 }
 
 .nav-menu a.active {
-    background-color: var(--background-dark);
+    background-color: var(--orange);
 }
 
 /* Dropdown menu */
@@ -143,7 +142,10 @@ header a{
 /*#endregion Navigation*/
 
 /*#region Footer*/
-footer {
+footer{
+    position: relative;
+    bottom: 0;
+
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
@@ -175,14 +177,20 @@ footer ul{
 /*#endregion Footer*/
 
 /*#region Main Content */
-main, aside{
+
+#pageContent{
     margin: 1rem;
+    position: relative;
 }
+
 /*#endregion Main Content */
 
 /*#region Site-wide Components */
 
 .card {
+    position: relative;
+    text-align: center;
+
     flex-direction: column;
 
     align-items: center;
@@ -197,7 +205,7 @@ main, aside{
 }
 
 .sticker-container, .nav-menu a {
-    background-color: var(--orange);
+    background-color: var(--blue);
     padding: 0.8em 1.5em;
 
     width: 8em;
