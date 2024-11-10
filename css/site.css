@@ -21,8 +21,9 @@
     --darker-blue: #84b4d2;
     --purple: #B9ABEA;
     --orange: #F0C99C;
+}
 
-    /*Fonts*/
+:root, input, button {
     font-family: "QuickSand", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -43,9 +44,18 @@ li{
     margin: 0;
 }
 
+ul, ol {
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*#endregion Huisstijl*/
 
-header, .title, .logo, .nav-menu, .has-children:hover ul, card{
+header, .title, .logo, .nav-menu, .has-children:hover ul, card, #socials ul{
     display: flex;
 }
 
@@ -57,11 +67,6 @@ header {
     padding: 0 1rem;
     align-items: center;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
-}
-
-header a{
-    text-decoration: none;
-    color: inherit;
 }
 
 .title {
@@ -148,7 +153,6 @@ footer{
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
 
     background-color: var(--background-dark);
     padding: 1em;
@@ -169,7 +173,6 @@ footer ul{
 }
 
 #socials ul{
-    display: flex;
     justify-content: flex-end;
     gap: 1rem;
 }
@@ -179,8 +182,7 @@ footer ul{
 /*#region Main Content */
 
 #pageContent{
-    margin: 1rem;
-    position: relative;
+    margin: 2rem 1rem;
 }
 
 /*#endregion Main Content */
@@ -188,12 +190,10 @@ footer ul{
 /*#region Site-wide Components */
 
 .card {
-    position: relative;
     text-align: center;
 
     flex-direction: column;
 
-    align-items: center;
     align-content: center;
 
     background-color: var(--white);
@@ -210,9 +210,18 @@ footer ul{
 
     width: 8em;
     border-radius: 5em;
-    border: 0.5em solid var(--white);
+    border: 8px solid var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    font-weight: 700;
 }
 
 /*#endregion Site-wide Components */
 
+.card, footer{
+    align-items: center;
+}
+
+.pageContent, .card{
+    position: relative;
+}
