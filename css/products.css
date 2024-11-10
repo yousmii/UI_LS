@@ -101,6 +101,12 @@
     background-color: var(--blue);
     border-radius: 2rem;
     border: 8px solid var(--white);
+
+    font-weight: bold;
+}
+
+#filter ul li a:hover{
+    background-color: var(--purple);
 }
 
 #search_bar{

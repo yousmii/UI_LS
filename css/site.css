@@ -53,6 +53,10 @@ a {
     color: inherit;
 }
 
+address {
+    font-style: normal;
+}
+
 /*#endregion Huisstijl*/
 
 header, .title, .logo, .nav-menu, .has-children:hover ul, card, #socials ul{
