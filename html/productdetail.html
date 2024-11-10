@@ -13,6 +13,8 @@
 
 <body>
 
+<h1 class="hiddenTitle">Product</h1>
+
 <header class="header">
     <img src="../media/logo.svg" alt="Logo" id="logo">
     <span class="title">
@@ -22,9 +24,9 @@
     <nav>
         <h2 class="hiddenTitle">Navigatie</h2>
         <menu class="nav-menu">
-            <li><a class="active" href="../index.html"> Info </a></li>
+            <li><a href="../index.html"> Info </a></li>
             <li class="has-children">
-                <a href="products.html">Producten</a>
+                <a class="active" href="products.html">Producten</a>
                 <ul>
                     <li><a href="products.html">All Stickers</a></li>
                     <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
@@ -36,6 +38,16 @@
     </nav>
 </header>
 
+
+<nav id="breadcrumb">
+    <h2 class="hiddenTitle">Breadcrumb menu</h2>
+    <ol>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="products.html">Producten</a></li>
+        <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
+        <li>{product_name}</li>
+    </ol>
+</nav>
 <main>
     <section>
         <h2>{Productnaam}</h2>
