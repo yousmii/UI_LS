@@ -2,6 +2,7 @@
 .homeGrid {
     display: grid;
     grid-template-areas:
+        ". main ." /* To have it larger than the asides */
         "aboutMe main reviews";
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 1em;
@@ -9,7 +10,6 @@
 
 .aboutMe {
     grid-area: aboutMe;
-    justify-content: flex-end;
 }
 
 .main {
@@ -21,15 +21,9 @@
     justify-content: center;
 }
 
-.homeGrid aside {
-    display: flex;
-    flex-direction: column;
-}
-
 /*Page specific styling*/
 #pageContent h2 { /* pageContent is a class that is used on the main content of the page, this excl. the header and footer */
     text-align: center;
-
     margin: 1rem auto;
     padding: 1rem;
 }
@@ -41,7 +35,7 @@
 
 .card img {
     width: 80%;
-    position: relative;
+    position: relative; /* Allows the image to be forced to stay at the bottom of the card */
     border-radius: 1rem;
     margin-top: auto;
 }
@@ -62,7 +56,7 @@
     font-weight: bolder;
     color: var(--purple-text);
 
-    position: absolute;
+    position: absolute; /* To have the cite at the top left of the card and not cause the card to be bigger to allow space for the name */
     top: 0;
     left: 0;
     padding: 1em 1.5em;

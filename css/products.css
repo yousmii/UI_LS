@@ -2,7 +2,7 @@
     display: flex;
 }
 
-#search_bar, #filter ul li a{
+#search_bar, #filter ul li a, .productList > li > a{
     display: block;
 }
 
@@ -15,7 +15,7 @@
 }
 
 #filter:hover ul, .label{
-    position: absolute;
+    position: absolute; /* To allow overlaying of the submenu and the label */
 }
 
 /*region ProductList*/
@@ -27,7 +27,6 @@
 }
 
 .productList > li{
-    background-color: var(--white);
     border-radius: 1.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -37,8 +36,7 @@
 }
 
 .productList > li > a{
-    display: block;
-    position: relative;
+    position: relative; /* To allow overlaying of the label */
 }
 
 .productList > li:hover{
@@ -71,7 +69,7 @@
 
 /*#region Filters*/
 .filters{
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem;
 }
 
@@ -95,7 +93,6 @@
 }
 
 #filter ul li a{
-    display: block;
     padding: 0.5rem 1rem;
 
     background-color: var(--blue);
@@ -110,8 +107,7 @@
 }
 
 #search_bar{
-    flex-grow: 1;
-
+    min-width: 60vw;
 }
 
 #search_bar input{
@@ -120,6 +116,11 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: none;
     width: 90%;
+
 }
 
 /*#endregion Filters*/
+
+#search_bar input, .productList > li{
+    background-color: var(--white);
+}

@@ -19,7 +19,7 @@
     --green: #87b07e;
     --blue: #B9D9F0;
     --darker-blue: #84b4d2;
-    --purple: #B9ABEA;
+    --purple: #a48de3;
     --orange: #F0C99C;
 }
 
@@ -32,19 +32,22 @@
 
 h1, h2, h3, h4, h5, h6 {
     text-transform: capitalize;
+    margin: 0.5rem 0;
 }
 
 body {
     background-color: var(--background);
-    margin: 0; /*Remove default margin for header and footer*/
 }
 
-li{
-    list-style-type: none;
+body, li{
     margin: 0;
 }
 
-ul, ol {
+p, ul, ol {
+    margin: 1rem 0;
+}
+
+p, ul, ol, .nav-menu, .has-children ul {
     padding: 0;
 }
 
@@ -57,15 +60,33 @@ address {
     font-style: normal;
 }
 
-/*#endregion Huisstijl*/
+details summary{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0.3rem 0;
+}
 
-header, .title, .logo, .nav-menu, .has-children:hover ul, card, #socials ul{
-    display: flex;
+details summary::after{
+    content: ':';
+    color: var(--text)
+}
+
+details span{
+    padding-left: 1rem;
+}
+
+details summary, li, ul{
+    list-style-type: none;
+}
+
+    /*#endregion Huisstijl*/
+
+header, .title, .logo, .nav-menu, .has-children:hover ul, card, #socials ul, footer{
+    display: flex; /* Flexbox for layout, idk what else to say other than that it makes it super easy to style */
 }
 
 /*#region Header*/
 header {
-    background-color: var(--white);
     margin-bottom: 1rem;
     gap: 1rem;
     padding: 0 1rem;
@@ -76,7 +97,6 @@ header {
 .title {
     flex-grow: 1;
     font-size: 1.8em;
-    font-weight: bolder;
 }
 
 #logo {
@@ -85,7 +105,7 @@ header {
 }
 
 .hiddenTitle {
-    position: absolute;
+    position: absolute; /* Remove from flow, to allow it to be hidden yet remain in the outline */
     width: 1px;
     height: 1px;
     overflow: hidden;
@@ -96,17 +116,13 @@ header {
 /*#region Navigation*/
 .nav-menu {
     gap: 1rem;
-    list-style-type: none;
-    padding: 0;
-
 }
 
 .nav-menu a {
-    display: block;
+    display: block; /* Make the entire link clickable */
 
     text-decoration: none;
     font-weight: bold;
-    text-align: center;
 }
 
 .nav-menu li>a:hover {
@@ -126,12 +142,10 @@ header {
 }
 
 .has-children ul {
-    display: none;
-    list-style-type: none;
-    position: absolute;
+    display: none; /* Hide the submenu by default */
+    position: absolute; /* Remove from flow, to allow overlaying when the submenu opens */
 
     margin-top: 0;
-    padding: 0;
 }
 
 .has-children:hover ul {
@@ -152,11 +166,8 @@ header {
 
 /*#region Footer*/
 footer{
-    position: relative;
-    bottom: 0;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: stretch;
+    margin-top: 10px;
 
     background-color: var(--background-dark);
     padding: 1em;
@@ -167,20 +178,14 @@ footer a{
     text-decoration: none;
 }
 
-footer ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-#legal{
-    text-align: center;
-}
-
 #socials ul{
     justify-content: flex-end;
     gap: 1rem;
 }
 
+#legal{
+    flex-grow: 1; /* Force centering and fill the gaps generated in flex*/
+}
 /*#endregion Footer*/
 
 /*#region Main Content */
@@ -194,13 +199,8 @@ footer ul{
 /*#region Site-wide Components */
 
 .card {
-    text-align: center;
-
     flex-direction: column;
-
     align-content: center;
-
-    background-color: var(--white);
     border-radius: 2rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
@@ -227,15 +227,15 @@ footer ul{
 }
 
 .pageContent, .card{
-    position: relative;
+    position: relative; /* Allow for absolute positioning within the item :) */
 }
 
 .label{
     color: var(--white);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    font-weight: bold;
+    border-radius: 1.5rem;
+    height: 1.5rem;
 }
 .label.new{
     background-color: var(--green);
@@ -247,4 +247,16 @@ footer ul{
 }
 .label.sale{
     background-color: var(--purple-text);
+}
+
+.nav-menu a, .label, .card, #legal{
+    text-align: center;
+}
+
+header, .card{
+    background-color: var(--white);
+}
+
+.label, .title{
+    font-weight: bolder;
 }

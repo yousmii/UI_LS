@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/site.css"/>
+    <link rel="stylesheet" href="../css/productdetail.css"/>
 </head>
 
 <body>
@@ -38,33 +39,46 @@
     </nav>
 </header>
 
-<nav id="breadcrumb">
-    <h2 class="hiddenTitle">Breadcrumb menu</h2>
-    <ol>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="products.html">Producten</a></li>
-        <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
-        <li>Space Bunny</li>
-    </ol>
-</nav>
+<div id="pageContent">
+    <nav id="breadcrumb">
+        <h2 class="hiddenTitle">Breadcrumb menu</h2>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="products.html">Producten</a></li>
+            <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
+            <li>Space Bunny Sticker</li>
+        </ol>
+    </nav>
 
-<div class="pageContent">
-<main>
-    <section>
-        <h2>Space Bunny Sticker</h2>
-        <img src="../media/single_stickers/space_bunny.jpg" alt="Space Bunny Sticker" id="productImage">
-        <section>
-            <h3>Productinformatie:</h3>
-            <p>She's magical, she's beautiful, she's reaching for the stars!✧ 7cm, waterproof matte vinyl sticker.</p>
-            <p>Prijs: 2EUR</p>
-            <p>Productcode: DS001</p>
+    <main id="main">
+        <section id="product">
+            <img src="../media/single_stickers/space_bunny.jpg" alt="Space Bunny Sticker" id="productImage">
+            <h2 id="productTitle">Space Bunny Sticker</h2>
+            <span class="label sold-out"> Sold out :(</span>
+            <p id="productDescription">Space Bunny is een schattige sticker van een konijn in het heelal.</p>
+            <section id="productDetails" >
+                <h3 class="hiddenTitle">Productdetails:</h3>
+                <details open>
+                    <summary>Prijs</summary>
+                    <span>2EUR</span>
+                </details>
+                <details open>
+                    <summary>Formaat</summary>
+                    <span>5cm x 5cm</span>
+                </details>
+                <details open>
+                    <summary>Materiaal</summary>
+                    <span>Matte Vinyl dat waterbestendig is</span>
+                </details>
+
+            </section>
         </section>
-    </section>
-    <section>
-        <h2>Bestel hier</h2>
-        <p><a href="bestel.html">Bestelpagina</a></p>
-    </section>
-</main>
+    </main>
+
+    <aside id="bestel">
+        <h2 class="hiddenTitle">Bestellen</h2>
+        <a class="sticker-container" href="bestel.html">Bestellen</a>
+    </aside>
 </div>
 
 <footer class="footer">
