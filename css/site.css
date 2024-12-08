@@ -5,7 +5,7 @@
     --background-dark: #84b4d2;
 
     --text: #3f3f3f;
-    --text-light: #e3e3e3;
+    --text-light: #838383;
     --subtext: #707070;
     --subtext-light: #b0b0b0;
 
@@ -23,7 +23,7 @@
     --orange: #F0C99C;
 }
 
-:root, input, button {
+:root, input, button, select, option, textarea {
     font-family: "QuickSand", sans-serif;
     font-size: 16px;
     font-weight: 500;
@@ -78,6 +78,8 @@ details span{
 details summary, li, ul{
     list-style-type: none;
 }
+
+
 
     /*#endregion Huisstijl*/
 

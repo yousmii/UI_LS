@@ -2,13 +2,17 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Bestellen</title>
+    <title>Bestelformulier</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="../css/site.css"/>
+    <link rel="stylesheet" href="../css/bestel.css"/>
+
+    <script src="../scripts/bestel.js" defer></script>
 </head>
 
 <body>
@@ -40,24 +44,58 @@
 
 
 <main id="pageContent">
-    <section>
-        <h2>Bestel hier je stickers</h2>
-        <form>
-            <label for="naam">Naam:</label>
-            <input type="text" id="naam" name="naam" required>
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="straat-nr">Straat en huisnummer:</label>
-            <input type="text" id="straat-nr" name="straat-nr" required>
-            <label for="postcode">Postcode en Gemeente:</label>
-            <input type="text" id="postcode" name="postcode" required>
-            <label for="land">Land:</label>
-            <input type="text" id="land" name="land" required>
-            <label for="producten">Producten:</label>
-            <input type="text" id="producten" name="producten" required>
+    <section id="form-container" class="card">
+        <h2>Bestelformulier</h2>
+        <form action="bestelling_gereed.html" method="get">
+            <fieldset class="card">
+    <legend>Klantgegevens</legend>
+    <div>
+        <label class="required" for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" placeholder="John Doe" required>
+    </div>
+    <div>
+        <label class="required" for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+    </div>
+    <div>
+        <label class="required" for="adres">Straat en huisnummer:</label>
+        <input type="text" id="adres" name="adres" placeholder="Turnhoutsebaan 1" required>
+    </div>
+    <div>
+        <label class="required" for="postcode">Postcode:</label>
+        <input type="number" id="postcode" name="postcode" placeholder="2140" required>
+    </div>
+    <div>
+        <label class="required" for="stad">Stad:</label>
+        <input type="text" id="stad" name="stad" placeholder="Antwerpen" required>
+    </div>
+    <div>
+        <label class="required" for="telefoon">Telefoon:</label>
+        <input type="tel" id="telefoon" name="telefoon" placeholder="+32 455 75 57 75" required>
+    </div>
+</fieldset>
+            <fieldset class="card">
+                <legend>Productinfo</legend>
+                <div>
+                    <label class="required"  for="product">Product:</label>
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected>Selecteer een product</option>
+                        <option value="custom_single">Custom Single Sticker</option>
+                        <option value="custom_sheet">Custom Sticker Sheet</option>
+                        <!--for javascript to fill with the other products-->
+                    </select>
+                </div>
+                <div id="custom-option-container">
+                    <!--For JS to fill when custom options are selected-->
+                </div>
+                <div>
+                    <label for="opmerkingen">Opmerkingen:</label>
+                    <textarea id="opmerkingen" name="opmerkingen" placeholder="Nog iets dat je wil doorgeven?"></textarea>
+                </div>
+            </fieldset>
+
+            <button id="confirm" class="sticker-container" type="submit">Bestel</button>
         </form>
-        <button type="submit">Bestel</button>
-        <a href="./bestelling_gereed.html">Testen confirmatie</a> <!-- Dit is een testlink om naar de confirmatiepagina te gaan -->
     </section>
 </main>
 
