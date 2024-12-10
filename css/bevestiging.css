@@ -1,0 +1,16 @@
+#pageContent{
+    /*omg this works so well for the perfect layout :D */
+    margin: 3rem auto;
+    max-width: 800px;
+}
+
+.key{
+    font-size: 1.1rem;
+    color: var(--purple-text);
+}
+
+#info ul li{
+    margin: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}

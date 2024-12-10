@@ -62,7 +62,6 @@ address {
 
 details summary{
     font-size: 1.2rem;
-    font-weight: bold;
     margin: 0.3rem 0;
 }
 
@@ -83,7 +82,7 @@ details summary, li, ul{
 
     /*#endregion Huisstijl*/
 
-header, .title, .logo, .nav-menu, .has-children:hover ul, card, #socials ul, footer{
+header, .title, .logo, .nav-menu, .has-children:hover ul, card, #socials ul, footer, fieldset div{
     display: flex; /* Flexbox for layout, idk what else to say other than that it makes it super easy to style */
 }
 
@@ -122,9 +121,7 @@ header {
 
 .nav-menu a {
     display: block; /* Make the entire link clickable */
-
     text-decoration: none;
-    font-weight: bold;
 }
 
 .nav-menu li>a:hover {
@@ -152,7 +149,7 @@ header {
 
 .has-children:hover ul {
     flex-direction: column;
-    z-index: 1;
+    z-index: 999999; /* Make sure the submenu is on top of everything */
 
 }
 
@@ -232,7 +229,7 @@ footer a{
     position: relative; /* Allow for absolute positioning within the item :) */
 }
 
-.label{
+.label {
     color: var(--white);
     font-size: 1.1rem;
     padding: 0.5rem 1rem;
@@ -247,7 +244,7 @@ footer a{
     background-color: var(--red);
 
 }
-.label.sale{
+.label.on-sale{
     background-color: var(--purple-text);
 }
 
@@ -261,4 +258,70 @@ header, .card{
 
 .label, .title{
     font-weight: bolder;
+}
+
+.hidden-element {
+    display: none;
+}
+
+legend {
+    font-size: 1.3rem;
+    color: var(--darker-blue);
+}
+
+fieldset {
+    border: 2px solid var(--darker-blue);
+    padding: 20px;
+}
+
+fieldset div {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+fieldset div label , legend, .nav-menu a , details summary{
+    font-weight: bold;
+}
+
+input, select, textarea{
+    padding: 8px 15px;
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+    color: var(--text);
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline: none;
+    border: 2px solid var(--purple);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color: var(--text-light);
+}
+
+
+/* Hide the spinners on number input fields */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox uses a different engine */
+}
+
+/* JS generated elements styling */
+.asterisk {
+    color: var(--red);
 }

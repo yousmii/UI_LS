@@ -2,18 +2,22 @@
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Product</title>
+    <title>Product Detail</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/site.css"/>
+    <link rel="stylesheet" href="../css/productdetail.css"/>
+
+    <script type="module" src="../scripts/data.js"></script>
+    <script type="module" src="../scripts/productdetail.js"></script>
 </head>
 
 <body>
 
-<h1 class="hiddenTitle">Product</h1>
+<h1 id="pagetitle" class="hiddenTitle">Product naam</h1>
 
 <header class="header">
     <img src="../media/logo.svg" alt="Logo" id="logo">
@@ -38,34 +42,28 @@
     </nav>
 </header>
 
+<div id="pageContent">
+    <nav id="breadcrumb">
+        <h2 class="hiddenTitle">Breadcrumb menu</h2>
+        <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="products.html">Producten</a></li>
+            <li id="breadcrumbTitle">Product Naam</li>
+        </ol>
+    </nav>
 
-<nav id="breadcrumb">
-    <h2 class="hiddenTitle">Breadcrumb menu</h2>
-    <ol>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="products.html">Producten</a></li>
-        <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
-        <li>{product_name}</li>
-    </ol>
-</nav>
-<main>
-    <section>
-        <h2>{Productnaam}</h2>
-<!--        <img src="../media/single_stickers/{stickername}.jpg" alt="{Productnaam}" id="productImage">-->
-
-        <section>
-            <h3>Productinformatie:</h3>
-            <p>{Productbeschrijving}</p>
-            <p>Prijs: {Productprijs}</p>
-            <p>Productcode: {Productcode}</p>
+    <main id="main"> <!-- Gets filled with the data depending on the name given in the data-->
+        <section id="product">
+            <img src="../media/custom-option.png" alt="Foto" id="productImage">
+            <h2 id="productTitle">Product Naam</h2>
+            <span id="label" class="key"></span>
+            <p id="productDescription">Beschrijving</p>
+            <section id="productDetails">
+                <h3 class="hiddenTitle"> Details van het product</h3>
+            </section>
         </section>
-
-    </section>
-    <section>
-        <h2>Bestel hier</h2>
-        <p><a href="bestel.html">Bestelpagina</a></p>
-    </section>
-</main>
+    </main>
+</div>
 
 <footer class="footer">
     <section id="contact">

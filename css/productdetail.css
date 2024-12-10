@@ -8,7 +8,6 @@
 }
 
 #breadcrumb{
-    grid-area: breadcrumb;
     justify-content: center;
     align-items: center;
 }
@@ -35,26 +34,13 @@
     color: var(--text)
 }
 
-#pageContent, #product{
-    display: grid; /* The grid container for the main content is to force the empty spacing, as for the product, its to have a nice card :3 */
-}
-
-#pageContent{
-    grid-template-areas:
-    "breadcrumb breadcrumb breadcrumb"
-    ". main ."
-    ". bestel .";
-
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 1rem;
-    justify-items: center;
-}
-
 #main{
-    grid-area: main;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 #product{
+    display: grid;
     grid-template-areas:
     "image label"
     "image title"
@@ -87,18 +73,6 @@
 #productDetails{
     grid-area: details;
     padding-left: 3rem;
-}
-
-#bestel{
-    grid-area: bestel;
-    height: 100%;
-}
-
-#bestel a{
-    display: block; /* This is to make the button take the full width of the container, else it just starts overlapping with other contents */
-    text-align: center;
-    background-color: var(--orange);
-    font-size: 1.2rem;
 }
 
 .label{

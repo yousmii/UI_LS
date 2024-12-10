@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="../css/site.css"/>
     <link rel="stylesheet" href="../css/bestel.css"/>
 
-    <script src="../scripts/bestel.js" defer></script>
+    <script type="module" src="../scripts/data.js"></script>
+    <script type="module" src="../scripts/bestel.js"></script>
 </head>
 
 <body>
@@ -46,51 +47,56 @@
 <main id="pageContent">
     <section id="form-container" class="card">
         <h2>Bestelformulier</h2>
-        <form action="bestelling_gereed.html" method="get">
+        <form action="bevestiging.html" method="get">
             <fieldset class="card">
-    <legend>Klantgegevens</legend>
-    <div>
-        <label class="required" for="naam">Naam:</label>
-        <input type="text" id="naam" name="naam" placeholder="John Doe" required>
-    </div>
-    <div>
-        <label class="required" for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
-    </div>
-    <div>
-        <label class="required" for="adres">Straat en huisnummer:</label>
-        <input type="text" id="adres" name="adres" placeholder="Turnhoutsebaan 1" required>
-    </div>
-    <div>
-        <label class="required" for="postcode">Postcode:</label>
-        <input type="number" id="postcode" name="postcode" placeholder="2140" required>
-    </div>
-    <div>
-        <label class="required" for="stad">Stad:</label>
-        <input type="text" id="stad" name="stad" placeholder="Antwerpen" required>
-    </div>
-    <div>
-        <label class="required" for="telefoon">Telefoon:</label>
-        <input type="tel" id="telefoon" name="telefoon" placeholder="+32 455 75 57 75" required>
-    </div>
-</fieldset>
+                <legend>Klantgegevens</legend>
+                <div>
+                    <label class="required" for="voornaam">Voornaam:</label>
+                    <input type="text" id="voornaam" name="voornaam" placeholder="John" required>
+                </div>
+                <div>
+                    <label class="required" for="naam">Naam:</label>
+                    <input type="text" id="naam" name="naam" placeholder="Doe" required>
+                </div>
+                <div>
+                    <label class="required" for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                </div>
+                <div>
+                    <label class="required" for="telefoon">Telefoon:</label>
+                    <input type="tel" id="telefoon" name="telefoon" placeholder="+32 455 75 57 75" required
+                           pattern="^(?:\+32|0)\s?\d{2}\s?\d{3}\s?\d{2}\s?\d{2}$">
+                </div>
+                <div>
+                    <label class="required" for="adres">Straat en huisnummer:</label>
+                    <input type="text" id="adres" name="adres" placeholder="Turnhoutsebaan 1" required>
+                </div>
+                <div>
+                    <label class="required" for="postcode">Postcode:</label>
+                    <input type="text" id="postcode" name="postcode" placeholder="2140" required pattern="^\d{4}$">
+                </div>
+                <div>
+                    <label class="required" for="stad">Stad:</label>
+                    <input type="text" id="stad" name="stad" placeholder="Antwerpen" required>
+                </div>
+            </fieldset>
             <fieldset class="card">
                 <legend>Productinfo</legend>
                 <div>
-                    <label class="required"  for="product">Product:</label>
+                    <label class="required" for="product">Product:</label>
                     <select id="product" name="product" required>
                         <option value="" disabled selected>Selecteer een product</option>
                         <option value="custom_single">Custom Single Sticker</option>
-                        <option value="custom_sheet">Custom Sticker Sheet</option>
                         <!--for javascript to fill with the other products-->
                     </select>
                 </div>
                 <div id="custom-option-container">
-                    <!--For JS to fill when custom options are selected-->
+                    <!--Gets filled by JS-->
                 </div>
                 <div>
                     <label for="opmerkingen">Opmerkingen:</label>
-                    <textarea id="opmerkingen" name="opmerkingen" placeholder="Nog iets dat je wil doorgeven?"></textarea>
+                    <textarea id="opmerkingen" name="opmerkingen"
+                              placeholder="Nog iets dat je wil doorgeven?"></textarea>
                 </div>
             </fieldset>
 

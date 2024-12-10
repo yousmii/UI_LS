@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Space Bunny Sticker</title>
+    <title>Bestelling gemaakt!</title>
     <link rel="icon" type="image/x-icon" href="/media/favicon.ico"/>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/site.css"/>
-    <link rel="stylesheet" href="../css/productdetail.css"/>
-</head>
+    <link rel="stylesheet" href="../css/bevestiging.css">
+    <link rel="stylesheet" href="../css/productdetail.css">
 
+    <script type="module" src="../scripts/data.js"></script>
+    <script type="module" src="../scripts/bevestiging.js"></script>
+
+</head>
 <body>
 
-<h1 class="hiddenTitle">Space Bunny Sticker</h1>
+<h1 class="hiddenTitle">Bestelling gemaakt</h1>
 
 <header class="header">
     <img src="../media/logo.svg" alt="Logo" id="logo">
@@ -27,59 +31,48 @@
         <menu class="nav-menu">
             <li><a href="../index.html"> Info </a></li>
             <li class="has-children">
-                <a class="active" href="products.html">Producten</a>
+                <a href="products.html">Producten</a>
                 <ul>
                     <li><a href="products.html">All Stickers</a></li>
                     <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
                     <li><a href="products.html?category=sticker_sheets">Sticker Sheets</a></li>
                 </ul>
             </li>
-            <li><a href="bestel.html">Bestel</a></li>
+            <li><a class="active" href="bestel.html">Bestel</a></li>
         </menu>
     </nav>
 </header>
 
-<div id="pageContent">
-    <nav id="breadcrumb">
-        <h2 class="hiddenTitle">Breadcrumb menu</h2>
-        <ol>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="products.html">Producten</a></li>
-            <li><a href="products.html?category=single_stickers">Single Stickers</a></li>
-            <li>Space Bunny Sticker</li>
-        </ol>
-    </nav>
+<main id="pageContent">
+    <section class="card">
+        <h2>Bedankt voor je bestelling ❤️</h2>
+        <p>Je bestelling is succesvol geplaatst. We zullen je bestelling zo snel mogelijk verwerken.</p>
+    </section>
 
-    <main id="main">
-        <section id="product">
-            <img src="../media/single_stickers/space_bunny.jpg" alt="Space Bunny Sticker" id="productImage">
-            <h2 id="productTitle">Space Bunny Sticker</h2>
-            <span class="label sold-out"> Sold out :(</span>
-            <p id="productDescription">Space Bunny is een schattige sticker van een konijn in het heelal.</p>
-            <section id="productDetails" >
-                <h3 class="hiddenTitle">Productdetails:</h3>
-                <details open>
-                    <summary>Prijs</summary>
-                    <span>2EUR</span>
-                </details>
-                <details open>
-                    <summary>Formaat</summary>
-                    <span>5cm x 5cm</span>
-                </details>
-                <details open>
-                    <summary>Materiaal</summary>
-                    <span>Matte Vinyl dat waterbestendig is</span>
-                </details>
+    <section id="info" class="card">
+        <h2>Overzicht van uw bestelling</h2>
+        <ul>
+            <li><span class="key">Voornaam:</span> <span id="voornaam">John</span></li>
+            <li><span class="key">Naam:</span> <span id="naam">Doe</span></li>
+            <li><span class="key">E-mail:</span> <span id="email"></span></li>
+            <li><span class="key">Telefoonnummer:</span> <span id="telefoonnummer"></span></li>
+            <li><span class="key">Straat en Huisnummer:</span> <span id="adres"></span></li>
+            <li><span class="key">Postcode:</span> <span id="postcode"></span></li>
+            <li><span class="key">Stad:</span> <span id="stad"></span></li>
+            <li><span class="key">Opmerkingen:</span> <span id="opmerkingen"></span></li>
+        </ul>
+    </section>
 
-            </section>
+    <section id="product" class="card">
+        <img src="" alt="Product" id="productImage">
+        <h2 id="productTitle">Product title</h2>
+        <span id="label" class="label"></span>
+        <p id="productDescription">Product description</p>
+        <section id="productDetails">
+            <h3 class="hiddenTitle"> Details van het product</h3>
         </section>
-    </main>
-
-    <aside id="bestel">
-        <h2 class="hiddenTitle">Bestellen</h2>
-        <a class="sticker-container" href="bestel.html">Bestellen</a>
-    </aside>
-</div>
+    </section>
+</main>
 
 <footer class="footer">
     <section id="contact">
@@ -114,5 +107,6 @@
         </ul>
     </section>
 </footer>
+
 </body>
 </html>

@@ -1,54 +1,53 @@
-.productList, .productList li, .filters, #filter:hover ul{
+#pageContent,  #productList,  #productList li, #filters{
     display: flex;
 }
 
-#search_bar, #filter ul li a, .productList > li > a{
+
+ #productList > li > a{
     display: block;
 }
 
-.productList > li, .filters{
+ #productList > li, .filters{
     align-items: center;
 }
 
-.productList > li, #filter:hover ul {
+ #productList > li{
     flex-direction: column;
 }
 
-#filter:hover ul, .label{
+.label{
     position: absolute; /* To allow overlaying of the submenu and the label */
 }
 
 /*region ProductList*/
-.productList{
+ #productList{
     flex-wrap: wrap;
-    justify-content: center;
     gap: 1.5rem;
-
+    justify-content: center;
 }
 
-.productList > li{
+ #productList > li{
     border-radius: 1.8rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
     padding: 1.8rem;
-
     transition: 0.1s;
+    background-color: var(--white);
 }
 
-.productList > li > a{
+ #productList > li > a{
     position: relative; /* To allow overlaying of the label */
 }
 
-.productList > li:hover{
+ #productList > li:hover{
     transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.productList img{
+ #productList img{
     border-radius: 1rem;
 }
 
-.productList ul > li:first-of-type{
+ #productList ul > li:first-of-type{
     font-weight: 700;
     font-size: 1.1rem;
     margin: 0.2rem 0;
@@ -60,67 +59,16 @@
     z-index: 1;
 }
 
-
-.productList .sold-out img{
+#productList .sold-out img{
     filter: grayscale(100%);
 }
 
 /*endregion ProductList*/
 
-/*#region Filters*/
-.filters{
-    justify-content: center;
-    padding: 2rem;
+#filter_container{
+    min-width: 400px;
 }
 
-.filter_button{
-    padding: 0.5rem 3rem;
-    background-color: var(--orange);
+#filters label{
     font-size: 1.2rem;
-}
-#filter{
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-}
-
-#filter ul {
-    display: none;
-}
-
-#filter:hover ul {
-    align-items: stretch;
-    z-index: 1;
-}
-
-#filter ul li a{
-    padding: 0.5rem 1rem;
-
-    background-color: var(--blue);
-    border-radius: 2rem;
-    border: 8px solid var(--white);
-
-    font-weight: bold;
-}
-
-#filter ul li a:hover{
-    background-color: var(--purple);
-}
-
-#search_bar{
-    min-width: 60vw;
-}
-
-#search_bar input{
-    padding: 1rem 1rem;
-    border-radius: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: none;
-    width: 90%;
-
-}
-
-/*#endregion Filters*/
-
-#search_bar input, .productList > li{
-    background-color: var(--white);
 }
