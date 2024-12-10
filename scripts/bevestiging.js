@@ -14,9 +14,9 @@ function init() {
 
     const product = stickers_data.find(sticker => sticker.name === urlParams.get('product'));
 
-    // if (!product) {
-    //     window.location.href = 'products.html'; // Redirect to products page if no name is provided
-    // }
+    if (!product) {
+        window.location.href = 'products.html'; // Redirect to products page if no name is provided
+    }
     loadProduct(product);
 }
 
